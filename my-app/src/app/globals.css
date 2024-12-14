@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  /* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif; /* Use the font in your Figma design */
+  font-size: 16px;
+  color: #333333; /* Neutral text color */
+  background-color: #F7F7F7; /* Light gray background */
+  height: 100%;
+}
+
+/* General Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background-color: #FFFFFF; /* White header */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 600;
+}
+
+header a:hover {
+  color: #0077FF; /* Accent color */
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #222222; /* Dark footer */
+  color: #FFFFFF; /* White text */
+  padding: 20px 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+footer a:hover {
+  color: #FF7A59; /* Accent hover color */
+}
+
+/* Buttons */
+button {
+  background-color: #0077FF; /* Primary button color */
+  color: #FFFFFF; /* White text */
+  border: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056CC; /* Darker blue for hover */
+}
+
+button:disabled {
+  background-color: #CCCCCC;
+  cursor: not-allowed;
+}
+
+/* Cards for Products */
+.card {
+  background-color: #FFFFFF; /* White card */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  margin: 15px 0;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02); /* Slight scale on hover */
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333333;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666666;
+  margin-top: 5px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 10px;
+  color: #222222;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: #0077FF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Grid System for Product Listings */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+}
+
+/* Forms */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #0077FF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 119, 255, 0.3); /* Focus outline */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+}
+
+}
+
